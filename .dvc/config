@@ -1,6 +1,3 @@
-[core]
-    remote = myremote
-['remote "myremote"']
-    url = gdrive://1GyXXPfPO5LBEo1dwqu2irj2lyrTFucCt
-    gdrive_acknowledge_abuse = true
-    gdrive_use_service_account = true
+['remote "origin"']
+    url = s3://dvc
+    endpointurl = https://dagshub.com/zidane.remix000/mlops-project.s3

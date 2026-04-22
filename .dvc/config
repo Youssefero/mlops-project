@@ -1,6 +1,10 @@
 [core]
-    remote = myremote
+    remote = gdrive_remote
 ['remote "myremote"']
     url = gdrive://1GyXXPfPO5LBEo1dwqu2irj2lyrTFucCt
     gdrive_acknowledge_abuse = true
     gdrive_use_service_account = true
+['remote "gdrive_remote"']
+    url = gdrive://1GyXXPfPO5LBEo1dwqu2irj2lyrTFucCt
+    gdrive_use_service_account = true
+    gdrive_service_account_json_file_path = C:\Users\ZIDAN\Desktop\MLops_project\dvc_key.json

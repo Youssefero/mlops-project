@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/ZIDAN/Desktop/MLops_project/mlruns/501688827314745362/models/m-a23015299170459fb351c7854d0e6e86/artifacts
+creation_timestamp: 1776934790004
+experiment_id: '501688827314745362'
+last_updated_timestamp: 1776934797727
+model_id: m-a23015299170459fb351c7854d0e6e86
+model_type: null
+name: random_forest_v2
+source_run_id: fd7d05a8733148fb8d0c7af4f6786d8d
+status: 2
+status_message: null

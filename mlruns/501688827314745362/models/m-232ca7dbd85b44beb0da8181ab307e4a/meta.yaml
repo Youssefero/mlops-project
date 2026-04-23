@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/ZIDAN/Desktop/MLops_project/mlruns/501688827314745362/models/m-232ca7dbd85b44beb0da8181ab307e4a/artifacts
+creation_timestamp: 1776934798864
+experiment_id: '501688827314745362'
+last_updated_timestamp: 1776934804651
+model_id: m-232ca7dbd85b44beb0da8181ab307e4a
+model_type: null
+name: xgboost_v2
+source_run_id: 6c78432a4956447cb9d031ba084181cf
+status: 2
+status_message: null

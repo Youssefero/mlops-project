@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/ZIDAN/Desktop/MLops_project/mlruns/898938823434348678/f9b8f47dd925419084de9eb1b4a7ed07/artifacts
+end_time: 1776933443495
+entry_point_name: ''
+experiment_id: '898938823434348678'
+lifecycle_stage: active
+run_id: f9b8f47dd925419084de9eb1b4a7ed07
+run_name: LSTM
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776933311447
+status: 3
+tags: []
+user_id: ZIDAN

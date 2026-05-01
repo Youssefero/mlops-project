@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/ZIDAN/Desktop/MLops_project/mlruns/501688827314745362/6c78432a4956447cb9d031ba084181cf/artifacts
+end_time: 1776934804692
+entry_point_name: ''
+experiment_id: '501688827314745362'
+lifecycle_stage: active
+run_id: 6c78432a4956447cb9d031ba084181cf
+run_name: XGBoost_v2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776934797764
+status: 3
+tags: []
+user_id: ZIDAN

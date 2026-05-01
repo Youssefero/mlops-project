@@ -1,5 +1,7 @@
 [core]
-    remote = gdrive_remote
+    remote = origin
+<<<<<<< HEAD
+=======
 ['remote "myremote"']
     url = gdrive://1GyXXPfPO5LBEo1dwqu2irj2lyrTFucCt
     gdrive_acknowledge_abuse = true
@@ -7,4 +9,8 @@
 ['remote "gdrive_remote"']
     url = gdrive://1GyXXPfPO5LBEo1dwqu2irj2lyrTFucCt
     gdrive_use_service_account = true
-    gdrive_service_account_json_file_path = C:\Users\ZIDAN\Desktop\MLops_project\dvc_key.json
+    gdrive_service_account_json_file_path = ../dvc_key.json
+>>>>>>> 6b37d90d4a2e47d1346cebb624f8c0cb5581f6f0
+['remote "origin"']
+    url = s3://dvc
+    endpointurl = https://dagshub.com/zidane.remix000/mlops-project.s3

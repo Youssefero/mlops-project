@@ -1,0 +1,20 @@
+artifact_path: file:///C:/Users/ZIDAN/Desktop/MLops_project/mlruns/898938823434348678/models/m-9925143ac2254460b8ed5f2477012018/artifacts
+flavors:
+  keras:
+    data: data
+    keras_backend: tensorflow
+    keras_version: 3.14.0
+    save_exported_model: false
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.keras
+    python_version: 3.11.9
+mlflow_version: 3.11.1
+model_id: m-9925143ac2254460b8ed5f2477012018
+model_size_bytes: 458526
+model_uuid: m-9925143ac2254460b8ed5f2477012018
+prompts: null
+run_id: f9b8f47dd925419084de9eb1b4a7ed07
+utc_time_created: '2026-04-23 08:37:11.185599'

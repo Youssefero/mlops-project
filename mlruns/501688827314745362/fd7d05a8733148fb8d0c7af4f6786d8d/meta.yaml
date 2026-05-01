@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/ZIDAN/Desktop/MLops_project/mlruns/501688827314745362/fd7d05a8733148fb8d0c7af4f6786d8d/artifacts
+end_time: 1776934797764
+entry_point_name: ''
+experiment_id: '501688827314745362'
+lifecycle_stage: active
+run_id: fd7d05a8733148fb8d0c7af4f6786d8d
+run_name: RandomForest_v2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776934788582
+status: 3
+tags: []
+user_id: ZIDAN

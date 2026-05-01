@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/ZIDAN/Desktop/MLops_project/mlruns/898938823434348678/models/m-9925143ac2254460b8ed5f2477012018/artifacts
+creation_timestamp: 1776933431064
+experiment_id: '898938823434348678'
+last_updated_timestamp: 1776933443476
+model_id: m-9925143ac2254460b8ed5f2477012018
+model_type: null
+name: lstm_model
+source_run_id: f9b8f47dd925419084de9eb1b4a7ed07
+status: 2
+status_message: null

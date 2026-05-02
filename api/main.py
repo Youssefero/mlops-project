@@ -50,6 +50,11 @@ class SensorData(BaseModel):
     volume_lag_24h: float
     was_irrigating_1h: float
 
+# Endpoint 0 — Accueil
+@app.get("/")
+def home():
+    return {"message": "Smart Irrigation API is running!"}
+
 # Endpoint 1 — Santé de l'API
 @app.get("/health")
 def health():

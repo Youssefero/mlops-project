@@ -10,6 +10,15 @@ model = pickle.load(open("models/best_model.pkl", "rb"))
 # Définition de l'application
 app = FastAPI(title="Smart Irrigation API")
 
+from fastapi.middleware.cors import CORSMiddleware # Ajouter cet import
+# ... après app = FastAPI() ...
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # Autorise React à appeler l'API
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # ✅ Activation du monitoring Prometheus
 Instrumentator().instrument(app).expose(app)
 

@@ -97,7 +97,7 @@ function PredictionForm({ onResult }) {
       const res = await axios.post(`${API_URL}/predict`, values);
       onResult(res.data.volume_predit_litres);
     } catch {
-      setError("Impossible de joindre l'API. Vérifiez qu'elle tourne sur le port 8000.");
+      setError("Impossible de joindre l'API. Vérifiez la configuration du serveur.");
     } finally { setLoading(false); }
   };
 

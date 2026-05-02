@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import API_URL from '../config';
 
 const defaultValues = {
   volume_L: 5.2,
@@ -70,7 +71,7 @@ function PredictionForm({ onResult }) {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.post('http://localhost:8000/predict', values);
+      const response = await axios.post(`${API_URL}/predict`, values);
       onResult(response.data.volume_predit_litres);
     } catch (err) {
       setError("❌ Erreur : Vérifiez que l'API est démarrée sur le port 8000");

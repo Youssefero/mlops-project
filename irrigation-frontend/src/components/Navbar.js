@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../config';
 
 /* ── SVG Icons (custom, no external lib needed) ─────────────────────────────── */
 const IconLeaf = () => (
@@ -47,7 +48,7 @@ function HealthPill() {
 
   useEffect(() => {
     const check = async () => {
-      try { await axios.get('http://localhost:8000/health'); setStatus('online'); }
+      try { await axios.get(`${API_URL}/health`); setStatus('online'); }
       catch { setStatus('offline'); }
     };
     check();

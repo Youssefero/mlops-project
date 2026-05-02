@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../config';
 
 function HealthStatus() {
   const [status, setStatus] = useState('checking');
@@ -7,7 +8,7 @@ function HealthStatus() {
   useEffect(() => {
     const checkHealth = async () => {
       try {
-        await axios.get('http://localhost:8000/health');
+        await axios.get(`${API_URL}/health`);
         setStatus('online');
       } catch {
         setStatus('offline');

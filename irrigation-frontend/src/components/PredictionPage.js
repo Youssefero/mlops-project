@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import API_URL from '../config';
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid,
   Tooltip, ResponsiveContainer, ReferenceLine
@@ -93,7 +94,7 @@ function PredictionForm({ onResult }) {
   const handleSubmit = async () => {
     setLoading(true); setError(null);
     try {
-      const res = await axios.post('http://localhost:8000/predict', values);
+      const res = await axios.post(`${API_URL}/predict`, values);
       onResult(res.data.volume_predit_litres);
     } catch {
       setError("Impossible de joindre l'API. Vérifiez qu'elle tourne sur le port 8000.");

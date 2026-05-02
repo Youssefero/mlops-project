@@ -5,4 +5,6 @@ if (API_URL.endsWith('/')) {
   API_URL = API_URL.slice(0, -1);
 }
 
+console.log("--- DEBUG: API_URL =", API_URL);
+
 export default API_URL;

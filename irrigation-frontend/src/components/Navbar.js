@@ -3,12 +3,6 @@ import axios from 'axios';
 import API_URL from '../config';
 
 /* ── SVG Icons (custom, no external lib needed) ─────────────────────────────── */
-const IconLeaf = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/>
-    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
-  </svg>
-);
 
 const IconDrop = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -23,15 +17,6 @@ const IconChart = () => (
   </svg>
 );
 
-const IconSensor = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="3"/>
-    <path d="M6.3 6.3a8 8 0 0 0 0 11.4"/>
-    <path d="M17.7 6.3a8 8 0 0 1 0 11.4"/>
-    <path d="M3.5 3.5a13 13 0 0 0 0 17"/>
-    <path d="M20.5 3.5a13 13 0 0 1 0 17"/>
-  </svg>
-);
 
 /* ── Logo Icon ─────────────────────────────────────────────────────────────── */
 const LogoIcon = () => (

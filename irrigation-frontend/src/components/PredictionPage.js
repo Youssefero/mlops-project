@@ -154,7 +154,6 @@ function ResultPanel({ result }) {
   }
 
   const niveau  = result < 1 ? 'Faible' : result < 5 ? 'Modéré' : 'Élevé';
-  const nColor  = result < 1 ? '#4caf50' : result < 5 ? '#ff9800' : '#f44336';
   const nEmoji  = result < 1 ? '🟢' : result < 5 ? '🟡' : '🔴';
 
   return (
@@ -195,7 +194,6 @@ function HistoryPanel({ history }) {
   }
 
   const avg   = (history.reduce((a,b) => a + b.value, 0) / history.length).toFixed(2);
-  const max   = Math.max(...history.map(h => h.value)).toFixed(2);
   const total = history.reduce((a,b) => a + b.value, 0).toFixed(1);
   const avgLine = parseFloat(avg);
 

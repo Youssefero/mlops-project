@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import API_URL from '../config';
+import logo from '../assets/logo.jpg';
 
 /* ── SVG Icons (custom, no external lib needed) ─────────────────────────────── */
 
@@ -58,7 +59,9 @@ export default function Navbar({ currentPage, onNavigate }) {
       <div className="navbar-inner">
         {/* Brand */}
         <div className="navbar-brand">
-          <div className="brand-icon"><LogoIcon /></div>
+          <div className="brand-icon">
+            <img src={logo} alt="SmartIrrig Logo" className="logo-img" />
+          </div>
           <div>
             <div className="brand-name">SmartIrrig</div>
             <div className="brand-sub">MLOps · STUARD Dataset</div>

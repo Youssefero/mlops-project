@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd irrigation-frontend && npm install && npm run build",
-  "outputDirectory": "irrigation-frontend/build",
-  "framework": "create-react-app"
-}

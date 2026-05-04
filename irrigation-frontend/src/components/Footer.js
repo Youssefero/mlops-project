@@ -71,7 +71,7 @@ function Footer() {
               {/*  Produits et Dashboard */}
               {['Accueil', 'À propos', 'Contact', 'FAQ'].map((link, i) => (
                 <li key={i}>
-                  <a href="#" style={{
+                  <a href="#!" style={{
                     fontSize: '13px', color: '#7a9e8a',
                     textDecoration: 'none', display: 'flex',
                     alignItems: 'center', gap: '8px',
@@ -120,7 +120,7 @@ function Footer() {
                 'Comment interpréter les résultats ?',
               ].map((q, i) => (
                 <li key={i}>
-                  <a href="#" style={{
+                  <a href="#!" style={{
                     fontSize: '13px', color: '#7a9e8a',
                     textDecoration: 'none', display: 'flex',
                     alignItems: 'flex-start', gap: '8px',

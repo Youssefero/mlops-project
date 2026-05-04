@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../assets/logo1_no_bg.png';
 
 function Footer() {
   const [email, setEmail] = useState('');
@@ -29,15 +30,16 @@ function Footer() {
           marginBottom: '48px'
         }}>
 
-          {/*  Infos société */}
+          {/* Infos société */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '18px' }}>
               <div style={{
-                width: '36px', height: '36px',
-                background: '#00c37a', borderRadius: '8px',
-                display: 'flex', alignItems: 'center', justifyContent: 'center'
+                width: '45px', height: '45px',
+                background: 'none', borderRadius: '10px',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                overflow: 'visible'
               }}>
-                <i className="fa-solid fa-droplet" style={{ color: '#0a1f12', fontSize: '16px' }}></i>
+                <img src={logo} alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
               <span style={{ fontSize: '20px', fontWeight: '600', color: '#fff' }}>
                 Smart<span style={{ color: '#00c37a' }}>Irrig</span>

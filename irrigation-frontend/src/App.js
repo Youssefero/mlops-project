@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import PredictionPage from './components/PredictionPage';
 import DataDashboard from './components/DataDashboard';
+import Footer from './components/Footer';
 
 function App() {
   const [page, setPage]       = useState('predict');
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className="app">
       <Navbar currentPage={page} onNavigate={setPage} />
+
       <div className="page-content">
         {page === 'predict' && (
           <PredictionPage
@@ -29,6 +31,8 @@ function App() {
         )}
         {page === 'data' && <DataDashboard />}
       </div>
+
+      <Footer />
     </div>
   );
 }

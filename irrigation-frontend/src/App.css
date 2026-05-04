@@ -53,12 +53,10 @@ body {
   color: var(--neutral-900);
   /* background image with a soft teal/green overlay for readability */
   background:
-    linear-gradient(
-      160deg,
+    linear-gradient(160deg,
       rgba(0, 77, 64, 0.55) 0%,
       rgba(2, 136, 209, 0.25) 50%,
-      rgba(46, 125, 50, 0.40) 100%
-    ),
+      rgba(46, 125, 50, 0.40) 100%),
     url('./assets/background.png') no-repeat center center fixed;
   background-size: cover;
 }
@@ -94,7 +92,7 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 80px;
+  height: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,21 +101,23 @@ body {
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 30px;
   text-decoration: none;
 }
 
 .brand-icon {
-  width: 58px;
-  height: 58px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.15);
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+  background: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  border: none;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+  margin-top: 15px;
+  /* Offset to keep it centered despite slim navbar */
 }
 
 .logo-img {
@@ -133,7 +133,7 @@ body {
 
 .brand-name {
   font-family: 'Nunito', sans-serif;
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: -0.2px;
@@ -159,12 +159,12 @@ body {
   display: flex;
   align-items: center;
   gap: 7px;
-  padding: 8px 16px;
+  padding: 6px 12px;
   border-radius: var(--radius-sm);
   border: none;
   background: none;
   font-family: 'Inter', sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
@@ -203,12 +203,12 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 14px;
+  padding: 4px 12px;
   border-radius: 20px;
   font-family: 'Inter', sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  margin-left: 12px;
+  margin-left: 8px;
   border: 1.5px solid transparent;
   transition: all var(--transition);
   backdrop-filter: blur(8px);
@@ -241,8 +241,15 @@ body {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.25; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
 }
 
 /* ── Glass Cards ─────────────────────────────────────────────────────────────── */
@@ -343,16 +350,42 @@ body {
   margin-bottom: 14px;
 }
 
-.stat-icon.green  { background: rgba(76, 175, 80, 0.25); }
-.stat-icon.blue   { background: rgba(2, 136, 209, 0.25); }
-.stat-icon.teal   { background: rgba(0, 150, 136, 0.25); }
-.stat-icon.amber  { background: rgba(230, 81, 0, 0.25);  }
+.stat-icon.green {
+  background: rgba(76, 175, 80, 0.25);
+}
 
-.stat-icon svg { width: 20px; height: 20px; }
-.stat-icon.green svg  { color: #a5d6a7; }
-.stat-icon.blue svg   { color: #81d4fa; }
-.stat-icon.teal svg   { color: #80cbc4; }
-.stat-icon.amber svg  { color: #ffcc80; }
+.stat-icon.blue {
+  background: rgba(2, 136, 209, 0.25);
+}
+
+.stat-icon.teal {
+  background: rgba(0, 150, 136, 0.25);
+}
+
+.stat-icon.amber {
+  background: rgba(230, 81, 0, 0.25);
+}
+
+.stat-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.stat-icon.green svg {
+  color: #a5d6a7;
+}
+
+.stat-icon.blue svg {
+  color: #81d4fa;
+}
+
+.stat-icon.teal svg {
+  color: #80cbc4;
+}
+
+.stat-icon.amber svg {
+  color: #ffcc80;
+}
 
 .stat-value {
   font-family: 'Nunito', sans-serif;
@@ -653,8 +686,13 @@ body {
   color: var(--teal-300);
 }
 
-.mb-20 { margin-bottom: 20px; }
-.mb-24 { margin-bottom: 24px; }
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
 
 /* ── Water Level Bar ─────────────────────────────────────────────────────────── */
 .water-lines {
@@ -710,13 +748,26 @@ body {
 }
 
 @keyframes shimmer {
-  0%   { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
-.water-bar-fill.l1 { background: linear-gradient(90deg, var(--sky-500), var(--sky-300)); }
-.water-bar-fill.l2 { background: linear-gradient(90deg, var(--green-500), var(--teal-300)); }
-.water-bar-fill.l3 { background: linear-gradient(90deg, var(--teal-700), var(--teal-300)); }
+.water-bar-fill.l1 {
+  background: linear-gradient(90deg, var(--sky-500), var(--sky-300));
+}
+
+.water-bar-fill.l2 {
+  background: linear-gradient(90deg, var(--green-500), var(--teal-300));
+}
+
+.water-bar-fill.l3 {
+  background: linear-gradient(90deg, var(--teal-700), var(--teal-300));
+}
 
 /* ── Sensor Cards ────────────────────────────────────────────────────────────── */
 .sensor-grid {
@@ -762,8 +813,15 @@ body {
 }
 
 /* ── Charts ──────────────────────────────────────────────────────────────────── */
-.chart-wrap    { width: 100%; height: 240px; }
-.chart-wrap-lg { width: 100%; height: 280px; }
+.chart-wrap {
+  width: 100%;
+  height: 240px;
+}
+
+.chart-wrap-lg {
+  width: 100%;
+  height: 280px;
+}
 
 /* ── Tab Nav ─────────────────────────────────────────────────────────────────── */
 .tab-nav {
@@ -817,15 +875,38 @@ body {
 
 /* ── Responsive ──────────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .stat-grid { grid-template-columns: 1fr 1fr; }
-  .grid-2, .grid-1-2 { grid-template-columns: 1fr; }
-  .sensor-grid { grid-template-columns: 1fr 1fr; }
+  .stat-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-2,
+  .grid-1-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .sensor-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 600px) {
-  .page-content { padding: 16px; }
-  .stat-grid { grid-template-columns: 1fr 1fr; }
-  .grid-3 { grid-template-columns: 1fr 1fr; }
-  .navbar-links { gap: 2px; }
-  .nav-link span { display: none; }
+  .page-content {
+    padding: 16px;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .navbar-links {
+    gap: 2px;
+  }
+
+  .nav-link span {
+    display: none;
+  }
 }

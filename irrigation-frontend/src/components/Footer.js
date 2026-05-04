@@ -29,7 +29,7 @@ function Footer() {
           marginBottom: '48px'
         }}>
 
-          {/* Colonne 1 — Infos société */}
+          {/*  Infos société */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '18px' }}>
               <div style={{
@@ -48,7 +48,7 @@ function Footer() {
               Système intelligent de prédiction d'irrigation basé sur l'IA et les capteurs IoT pour une agriculture optimisée.
             </p>
 
-            {/* ✅ Seulement email — adresse et téléphone supprimés */}
+            {/* email  */}
             <div style={{
               display: 'flex', alignItems: 'flex-start',
               gap: '10px', marginBottom: '10px',
@@ -59,7 +59,7 @@ function Footer() {
             </div>
           </div>
 
-          {/* Colonne 2 — Navigation */}
+          {/* Navigation */}
           <div>
             <div style={{
               fontSize: '11px', fontWeight: '600', color: '#00c37a',
@@ -68,7 +68,7 @@ function Footer() {
               Navigation
             </div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              {/* ✅ Produits et Dashboard supprimés */}
+              {/*  Produits et Dashboard */}
               {['Accueil', 'À propos', 'Contact', 'FAQ'].map((link, i) => (
                 <li key={i}>
                   <a href="#" style={{
@@ -88,7 +88,7 @@ function Footer() {
             </ul>
           </div>
 
-          {/* ✅ Colonne 3 — À propos (remplace Produits) */}
+          {/* À propos (remplace Produits) */}
           <div>
             <div style={{
               fontSize: '11px', fontWeight: '600', color: '#00c37a',
@@ -103,7 +103,7 @@ function Footer() {
             </p>
           </div>
 
-          {/* ✅ Colonne 4 — FAQ + Newsletter */}
+          {/*  FAQ + Newsletter */}
           <div>
             {/* FAQ */}
             <div style={{
@@ -210,7 +210,7 @@ function Footer() {
         </div>
       </div>
 
-      {/* ✅ Barre du bas avec ton copyright personnalisé */}
+      {/*  Barre du bas avec  copyright */}
       <div style={{
         borderTop: '1px solid #1a3a24',
         padding: '20px 32px',

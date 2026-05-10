@@ -58,10 +58,39 @@ const labels = {
   was_irrigating_1h: 'Irriguait (0/1)',
 };
 
+const explanations = {
+  volume_L: "Volume d'eau actuel dans le système (Litres).",
+  heure_sin: "Transformation mathématique (Sinus) de l'heure pour le modèle (Cyclicité).",
+  soil_temperature: "Température actuelle du sol mesurée par les capteurs SMTC.",
+  temperature: "Température de l'air environnant.",
+  soil_humidity_roll_3h: "Moyenne de l'humidité du sol sur les 3 dernières heures.",
+  volume_L_roll_3h: "Moyenne du volume d'eau utilisé sur les 3 dernières heures.",
+  volume_lag_1h: "Volume d'eau qui a été mesuré il y a exactement 1 heure.",
+  volume_roll_24h: "Moyenne du volume d'eau utilisé sur les dernières 24 heures.",
+  ontario_units: "Indicateur agronomique basé sur la température pour évaluer la croissance.",
+  co2: "Niveau de Dioxyde de Carbone dans l'air (ppm).",
+  vpd_kpa: "Déficit de Pression de Vapeur (kPa). Plus il est haut, plus la plante \"transpire\".",
+  pressure: "Pression atmosphérique (hPa).",
+  soil_ec: "Conductivité Électrique du sol (indique le niveau de salinité/nutriments).",
+  volume_lag_48h: "Volume d'eau mesuré il y a 48 heures.",
+  soil_humidity: "Humidité actuelle du sol (%).",
+  gdd: "Degrés Jours de Croissance (Growing Degree Days). Mesure l'accumulation de chaleur.",
+  humidity: "Humidité relative de l'air (%).",
+  heure_cos: "Transformation mathématique (Cosinus) de l'heure actuelle.",
+  daily_mean_temperature: "Température moyenne journalière.",
+  daily_max_reduction: "Indicateur calculé de réduction de la température.",
+  standard_day_degree: "Indicateur de degrés-jours standard pour la culture.",
+  daily_max_above_Tbase: "Température maximale au-dessus de la température de base.",
+  daily_max: "Température maximale atteinte dans la journée.",
+  volume_lag_24h: "Volume d'eau mesuré il y a 24 heures.",
+  was_irrigating_1h: "Indique si le système était en train d'irriguer il y a 1 heure (1 = Oui, 0 = Non).",
+};
+
 function PredictionForm({ onResult }) {
   const [values, setValues] = useState(defaultValues);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [showInfo, setShowInfo] = useState(false);
 
   const handleChange = (key, value) => {
     setValues(prev => ({ ...prev, [key]: parseFloat(value) || 0 }));
@@ -96,6 +125,51 @@ function PredictionForm({ onResult }) {
           </div>
         ))}
       </div>
+      
+      <div className="info-section" style={{ marginTop: '20px', marginBottom: '20px' }}>
+        <button 
+          className="btn-secondary" 
+          onClick={() => setShowInfo(!showInfo)}
+          style={{ 
+            backgroundColor: '#e0f2f1', 
+            color: '#00695c', 
+            border: 'none', 
+            padding: '10px 15px', 
+            borderRadius: '5px',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+            width: '100%',
+            textAlign: 'left',
+            display: 'flex',
+            justifyContent: 'space-between'
+          }}
+        >
+          <span>ℹ️ Comprendre les champs à remplir</span>
+          <span>{showInfo ? '▲' : '▼'}</span>
+        </button>
+        
+        {showInfo && (
+          <div className="info-box" style={{ 
+            backgroundColor: '#f1f8e9', 
+            padding: '15px', 
+            borderRadius: '0 0 5px 5px',
+            border: '1px solid #c5e1a5',
+            borderTop: 'none',
+            fontSize: '0.9em',
+            maxHeight: '300px',
+            overflowY: 'auto'
+          }}>
+            <ul style={{ paddingLeft: '20px', margin: 0 }}>
+              {Object.keys(explanations).map(key => (
+                <li key={key} style={{ marginBottom: '8px' }}>
+                  <strong>{labels[key]} :</strong> {explanations[key]}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+
       {error && <div className="error-box">{error}</div>}
       <button
         className="btn-predict"

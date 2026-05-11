@@ -266,8 +266,8 @@ if __name__ == "__main__":
     # zenml init  (dans le terminal)
 
     # Lancer le pipeline
-    pipeline_instance = training_pipeline()
-    pipeline_instance.run()
+    training_pipeline()
+    
 
     print("\nPipeline terminé !")
     print("Pour voir les runs ZenML : zenml pipeline runs list")
